@@ -1,0 +1,41 @@
+.pointsContainer{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    background-color: rgba(255, 255, 255, 0.651);
+    padding: 10px 20px;
+  }
+  
+  .pointsContainer h3{
+    font-weight: 700;
+    color: #000;
+    margin: 10px;
+    margin: 20px 5px;
+    letter-spacing: normal;
+    font-size: 0.7rem;
+    word-spacing: 2px;
+  }
+  
+  .pointsContainer > div	{
+    margin: auto;
+    max-width: fit-content;
+  }
+  
+  .iconContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pointsContainer p , .pointsContainer strong {
+    word-spacing: 2px;
+    letter-spacing: normal;
+    width: 80%;
+  
+  text-align: center;
+  margin: auto;
+  font-size: 0.7rem;
+}
+
