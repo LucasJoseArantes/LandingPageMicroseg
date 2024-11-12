@@ -7,7 +7,6 @@
     }
 
     body .mapFooter iframe{
-        border: 2px solid red;
         width: 100% !important;
         margin: 20px 0px;
     }

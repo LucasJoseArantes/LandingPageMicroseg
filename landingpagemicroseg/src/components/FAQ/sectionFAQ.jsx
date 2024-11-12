@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../FAQ/sectionFAQ.css';
 import faqs from '../../jsons/faqs.json';
+import FadeTitle from '../fadeTitle/fadeTitle';
 
 const SectionFAQ = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -16,7 +17,7 @@ const SectionFAQ = () => {
     return (
         <section className="faqSection">
             <div className='faqSectionConatiner'>
-                <h1>Perguntas Frequentes</h1>
+            <FadeTitle title="Perguntas Frequentes" />
             <div className="faqList">
                 {faqs.map((faq, index) => (
                     <div key={index} className="faqItem">

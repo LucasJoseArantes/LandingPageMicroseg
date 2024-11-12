@@ -2,15 +2,13 @@ import React from "react";
 import Button from "../button";
 import "../US/sectionUs.css";
 import PointsBox from "./pointsBox";
+import FadeTitle from "../fadeTitle/fadeTitle";
 
 const WhyChooseUs = () => {
   return (
     <section className="sectionUs sucessImg">
       <div className="usMainContainer">
-        <h1>
-          Por que escolher a <strong>MicroSeg Distribuidora</strong>?
-        </h1>
-
+        <FadeTitle title=" Por que escolher a MicroSeg Distribuidora?"/>
           <div >
             <div>
               <div className="numbersContainer">

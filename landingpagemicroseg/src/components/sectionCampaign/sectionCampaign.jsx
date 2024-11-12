@@ -6,11 +6,13 @@ import 'swiper/css/pagination';
 import { Navigation, Autoplay } from 'swiper/modules';
 import CampaignSlide from './campaignSlide';
 import campaigns from '../../jsons/campaigns.json';
+import FadeTitle from '../fadeTitle/fadeTitle';
+
 
 const SectionCampaign = () => (
     <section className="sectionCampaign" id="sectionCampaign">
         <div className="mainImage">
-        <h1>Marcas Parceiras:</h1>
+            <FadeTitle title="Marcas Parceiras" />
         </div>
          <div className='swiperContainer'>
             

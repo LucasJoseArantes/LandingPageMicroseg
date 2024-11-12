@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../contact/sectionContact.css";
+import FadeSubTitle from "../fadeTitle/fadesubTitle";
 
 const SectionContact = () => {
   const [formState, setFormState] = useState({
@@ -100,7 +101,7 @@ const SectionContact = () => {
     <section className="sectionContact" id="contact">
       <div className="contactContent">
         <div className="contactTitle">
-          <h2 className="sectionTitle">Fale Conosco</h2>
+            <FadeSubTitle className="sectionTitle" text={"Fale Conosco"}/>
           <p className="sectionSubtitle">
             Deixe o seus dados e entraremos em contato!
           </p>
