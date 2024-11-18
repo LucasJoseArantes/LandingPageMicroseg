@@ -8,6 +8,7 @@ import WhyChooseUs from './components/US/sectionUs';
 import SectionContact from './components/contact/sectionContact';
 import Footer from './components/footer/footer';
 import SectionCampaign from './components/sectionCampaign/sectionCampaign';
+import Ratings from "./components/ratings/ratrings";
 import './app.css';
 
 const AnimatedSection = ({ children }) => {
@@ -35,16 +36,22 @@ function App() {
   return (
     <div>
       <Header />
-        <SectionOne />
+      <AnimatedSection>
+         <SectionOne />
+      </AnimatedSection>
 
       <AnimatedSection>
         <SectionCampaign />
       </AnimatedSection>
 
+
       <AnimatedSection>
         <WhyChooseUs />
       </AnimatedSection>
 
+      <AnimatedSection >
+        <Ratings /> 
+      </AnimatedSection>
       <AnimatedSection>
         <SectionFAQ />
       </AnimatedSection>

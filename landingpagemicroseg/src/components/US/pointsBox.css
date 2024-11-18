@@ -1,21 +1,23 @@
 .pointsContainer{
-    display: flex;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 90px;
-    background-color: rgba(255, 255, 255, 0.651);
-    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 50px 20px;
+  }
+
+  .pointsContainer > div {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    background-color: #00000000;
   }
   
   .pointsContainer h3{
     font-weight: 700;
     color: #000;
-    margin: 10px;
-    margin: 20px 5px;
+    margin: 5px 10px;
     letter-spacing: normal;
-    font-size: 0.7rem;
     word-spacing: 2px;
+    
   }
   
   .pointsContainer > div	{
@@ -39,3 +41,9 @@
   font-size: 0.7rem;
 }
 
+@media screen and (max-width: 768px){
+    .pointsContainer{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+}

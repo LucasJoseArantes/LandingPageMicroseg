@@ -4,8 +4,16 @@
     align-items: center;
     margin: auto;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.651);
     color: black;
+}
+
+.numbersContainer p {
+    margin-top: 5px;
+    word-spacing: 2px;
+}
+
+.numbersContainer h3{
+    font-size: 3rem;
 }
 
 .usMainContainer{
@@ -26,6 +34,13 @@
     padding: 20px;
 }
 
+.aboutUs-container{
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     
+    .numbersContainer{
+        flex-direction: column;
+    }
 }

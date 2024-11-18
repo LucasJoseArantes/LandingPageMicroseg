@@ -24,6 +24,7 @@ const SectionCampaign = () => (
             scrollbar={{ draggable: true }}
             modules={[Navigation, Autoplay]}
             autoplay={{ delay: 1000 }}
+            loop={true}
             style={{ maxWidth: '100%', height: '100%' }}
         >
             {campaigns.map((campaign, index) => (

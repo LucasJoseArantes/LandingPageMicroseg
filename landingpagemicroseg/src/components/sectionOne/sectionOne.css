@@ -1,73 +1,94 @@
-.sectionOne{
-  background-image: url('../../../public/assets/images/oneBgd.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 20px;
-    transition: background-image 1s ease-in-out; /* Transição suave */
-    height: 550px;
+
+body .sectionOne{
+  background-color: #ffffff !important;
 }
 
-.sectionOneConatiner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    flex-direction: column;
+.sectionOneContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: row;
+  height: 500px;
+}
+
+.imgContainer{
+  width: fit-content;
+  max-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgContainer img {
+  width: 700px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.imgContainer img.active {
+  opacity: 1;
+}
+
+.mainTitle h1,
+.mainTitle h2 {
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.mainTitle h1.active,
+.mainTitle h2.active {
+  opacity: 1;
 }
 
 .mainTitle {
-    flex: 1;
-    padding: 10px;
-    max-width: 400px;
-    align-items: center;
-    
-    margin: auto 50px;
-  }
-  
-
-  
-  .mainTitle h1{
-    height: 310px;
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: left;
-    
-  }
-
-  .mainTitle h2{
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-top: 10px;
-  }
-
-.mainImage{
-  display: flex;
-  flex-direction: column;
+  padding: 10px;
+  align-items: center;
   margin: auto;
-  margin-top: 30px;
-  flex-wrap: nowrap;
-  width: 100%;
-    flex: 1;
-
 }
 
+
+
+.mainTitle h1{
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: left;
+  
+}
+
+.mainTitle h2{
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+
 .partherBtn{
-  width: fit-content;
+width: fit-content;
 }
 
 
 @media (max-width: 768px) {
-
-  .mainTitle h1{
-      font-size: 2rem;
-      width: 250px;
-      margin-left: -50px;
+  .sectionOneContainer{
+      flex-direction: column;
+      height: 600px
+  }
+  .imgContainer img{
+      width: 300px;
+      height: auto;
   }
 
-    .mainTitle h2{
-        font-size: 0.8rem;
-        margin-left: -50px;
-        width: 200px;
+.mainTitle h1{
+    font-size: 2rem;
+    width: 250px;
+}
+
+.mainTitle h2{
+    font-size: 1.2rem;
+    width: 250px;
+  
+
     }
-  }
+
+}
