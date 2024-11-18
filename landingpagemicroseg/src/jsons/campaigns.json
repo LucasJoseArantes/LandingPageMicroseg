@@ -1,33 +1,33 @@
 [
     {
-        "imgPath":  "/assets/images/brands/1.png"
+        "imgPath":  "assets/1.png"
     },
     {
-        "imgPath":  "/assets/images/brands/2.png"
+        "imgPath":  "assets/2.png"
     },
     {
-        "imgPath":  "/assets/images/brands/3.png"
+        "imgPath":  "assets/3.png"
     },
     {
-        "imgPath":  "/assets/images/brands/4.png"
+        "imgPath":  "assets/4.png"
     },
     {
-        "imgPath":  "/assets/images/brands/5.png"
+        "imgPath":  "assets/5.png"
     },
     {
-        "imgPath":  "/assets/images/brands/6.png"
+        "imgPath":  "assets/6.png"
     },
     {
-        "imgPath":  "/assets/images/brands/7.png"
+        "imgPath":  "assets/7.png"
     },
     {
-        "imgPath":  "/assets/images/brands/8.png"
+        "imgPath":  "assets/8.png"
     },
     {
-        "imgPath":  "/assets/images/brands/9.png"
+        "imgPath":  "assets/9.png"
     },
     {
-        "imgPath":  "/assets/images/brands/10.png"
+        "imgPath":  "assets/10.png"
     }
     
 ]

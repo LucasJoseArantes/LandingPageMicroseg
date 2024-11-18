@@ -34,7 +34,7 @@ const SectionOne = () => {
       <div className="sectionOneContainer">
         <div className="imgContainer">
           <img
-            src={`/assets/images/bdg/${images[currentIndex]}.png`}
+            src={`assets/${images[currentIndex]}.png?raw=true`}
             alt=""
             className={isTransitioning ? "" : "active"}
           />
@@ -47,6 +47,7 @@ const SectionOne = () => {
             Somos a Distribuidora referência em equipamentos de segurança,
             informática e sonorização.
           </h2>
+          <div className="partherBtn"></div>
           <div className="partherBtn">
             <Button
               text="Seja um parceiro"
