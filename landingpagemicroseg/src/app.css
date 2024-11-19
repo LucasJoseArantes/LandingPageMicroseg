@@ -16,7 +16,7 @@ section:nth-child(odd){
     background-color: #f9f9f9;
 }
 
-section {
+section > div {
     padding: 10px 0px;
 }
 
@@ -69,6 +69,7 @@ body .zapzap  {
 }
 
 @media (max-width: 768px) {
+
     .pointsContainer{
       flex-direction: column;
     }

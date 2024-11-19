@@ -1,28 +1,44 @@
+/* Ajustes de layout responsivo */
 @media (max-width: 768px) {
-    
-
     .footerContent {   
-    flex-direction: column !important;
-    justify-content: center ;
-    }
-
-    body .mapFooter iframe{
-        width: 100% !important;
-        margin: 20px 0px;
-    }
-
-    .contactDetails{
-        font-size: 0.76rem;
-    }
-
-    .mapFooter{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto; /* Permitir ajuste automático da altura */
+        padding: 20px;
+        max-width: 100%; /* Ajuste total no mobile */
+    }
+
+    body .mapFooter iframe {
+        width: 100%; /* Ajusta ao tamanho do contêiner pai */
+        height: auto; /* Mantém proporção */
+        margin: 20px 0;
+    }
+
+    .contactDetails {
+        font-size: 0.76rem;
+        max-width: 100%; /* Ajusta ao tamanho do mobile */
+        margin-bottom: 20px;
+    }
+
+    .mapFooter {
+        flex-direction: column; /* Alinhar os filhos verticalmente */
+        width: 100%; /* Garante que ocupe a largura total */
+        align-items: center;
+    }
+
+    .logo {
+        margin: 0 auto; /* Centraliza a logo */
+        display: block; /* Garante centralização */
     }
     
-    
+    .socialIcons {
+        margin: 20px auto 0 auto; /* Centraliza os ícones de redes sociais */
+    }
 }
 
-.footerContainer{
+/* Estilos gerais */
+.footerContainer {
     max-width: 1200px;
     margin: auto;
 }
@@ -32,7 +48,6 @@
     color: #fff;
     padding: 20px;
     text-align: center;
-    width: 100%;
 }
 
 .footerContent {
@@ -43,7 +58,7 @@
     flex-direction: row;
 }
 
-.mapFooter{
+.mapFooter {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,32 +67,30 @@
     max-width: 1200px;
 }
 
-.mapFooter iframe{
+.mapFooter iframe {
     align-self: flex-end;
     justify-self: start;
     margin: auto;
-    margin-right: 0px;
+    margin-right: 0;
+    border: none;
 }
 
-
-.contactDetails{
+.contactDetails {
     display: flex;
     flex-direction: column;
     max-width: 1200px;
-    margin-right: 0px;
+    margin-right: 0;
 }
 
-.contactDetails span{
-margin: 5px 0px;
+.contactDetails span {
+    margin: 5px 0;
 }
-
 
 .logo {
     margin: auto;
-    margin-right: 100%;
-}	
+}
 
-hr{
+hr {
     width: 100%;
     border: 1px solid #ffffff16;
 }
@@ -104,3 +117,4 @@ hr{
     margin: 0;
     margin-top: 10px;
 }
+
