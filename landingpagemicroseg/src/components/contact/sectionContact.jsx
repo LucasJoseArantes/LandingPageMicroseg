@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import emailjs from "emailjs-com";
 import "../contact/sectionContact.css";
 import FadeSubTitle from "../fadeTitle/fadesubTitle";
 
@@ -8,8 +8,11 @@ const SectionContact = () => {
     name: "",
     phone: "",
     city: "",
-    segments: [], // Armazenar múltiplas seleções
+    segments: [],
   });
+
+  const [isSending, setIsSending] = useState(false); // Controle do estado de envio
+  const [successMessage, setSuccessMessage] = useState("");
 
   // Função para lidar com mudanças nos inputs
   const handleChange = (e) => {
@@ -17,73 +20,52 @@ const SectionContact = () => {
 
     if (type === "checkbox") {
       if (checked) {
-        // Adiciona o segmento selecionado ao array
         setFormState({
           ...formState,
           segments: [...formState.segments, value],
         });
       } else {
-        // Remove o segmento desmarcado do array
         setFormState({
           ...formState,
           segments: formState.segments.filter((segment) => segment !== value),
         });
       }
     } else {
-      // Para outros campos (ex: name, phone)
       setFormState({ ...formState, [name]: value });
     }
   };
 
-  // Função para enviar o formulário
+  // Função para enviar o formulário por e-mail
   const addCRM = (e) => {
-    e.preventDefault(); // Evita o reload da página
+    e.preventDefault();
+    setIsSending(true);
 
-    const notionApiUrl = "https://api.notion.com/v1/pages";
-    const notionToken = "secret_aoRIk9UkX2ZX0hj1etd2t4iDZf5jw7ofBmxnNhV1wCf";
-    const headers = {
-      Authorization: `Bearer ${notionToken}`,
-      "Content-Type": "application/json",
-      "Notion-Version": "2022-06-28",
-    };
+    const { name, phone, city, segments } = formState;
 
-    const data = {
-      parent: {
-        database_id: "1308d3c2b39980d9a6b3d9614f9b52e5", 
-      },
-      icon: {
-        type: "emoji",
-        emoji: "👤",
-      },
-      properties: {
-        Nome: {
-          title: [
-            {
-              type: "text",
-              text: {
-                content: formState.name, 
-                link: null,
-              },
-            },
-          ],
+    emailjs
+      .send(
+        "service_srotgxk", // Substitua pelo seu Service ID
+        "template_8s5r36f", // Substitua pelo seu Template ID
+        {
+          name,
+          phone,
+          city,
+          segments: segments.join(", "), // Converter array em string separada por vírgulas
         },
-        Telefone: {
-          phone_number: formState.phone, 
+        "CwWICS6tSKLnVk76_" // Substitua pelo seu User ID
+      )
+      .then(
+        (response) => {
+          setIsSending(false);
+          setSuccessMessage("Formulário enviado com sucesso!");
+          setFormState({ name: "", phone: "", city: "", segments: [] });
         },
-        Segmentos: {
-          multi_select: formState.segments.map((segment) => ({ name: segment })),
-        },
-      },
-    };
-
-    axios
-      .post(notionApiUrl, data, { headers })
-      .then((response) => {
-        alert("Dados enviados com sucesso!");
-      })
-      .catch((error) => {
-        alert("Erro ao enviar dados. Tente mais tarde");
-      });
+        (error) => {
+          setIsSending(false);
+          alert("Erro ao enviar o formulário. Tente novamente.");
+          console.error("Erro:", error);
+        }
+      );
   };
 
   const segmentsList = [
@@ -94,14 +76,14 @@ const SectionContact = () => {
     "Motor",
     "Informática",
     "Sonorização",
-    "Outros"
+    "Outros",
   ];
 
   return (
     <section className="sectionContact" id="contact">
       <div className="contactContent">
         <div className="contactTitle">
-            <FadeSubTitle className="sectionTitle" text={"Fale Conosco"}/>
+          <FadeSubTitle className="sectionTitle" text={"Fale Conosco"} />
           <p className="sectionSubtitle">
             Deixe o seus dados e entraremos em contato!
           </p>
@@ -117,6 +99,7 @@ const SectionContact = () => {
               placeholder="Preencha com seu nome"
               value={formState.name}
               onChange={handleChange}
+              required
             />
           </div>
           <div className="formGroup">
@@ -128,6 +111,7 @@ const SectionContact = () => {
               placeholder="(yy) xxxxx-xxxx"
               value={formState.phone}
               onChange={handleChange}
+              required
             />
           </div>
           <div className="formGroup">
@@ -139,10 +123,11 @@ const SectionContact = () => {
               placeholder="Preencha com a cidade"
               value={formState.city}
               onChange={handleChange}
+              required
             />
           </div>
 
-        <label>Segmentos de atuação</label>
+          <label>Segmentos de atuação</label>
           <div className="formGroup segments">
             {segmentsList.map((segment) => (
               <div key={segment}>
@@ -159,9 +144,11 @@ const SectionContact = () => {
               </div>
             ))}
           </div>
-          <button type="submit" className="button">
-            Enviar
+
+          <button type="submit" className="button" disabled={isSending}>
+            {isSending ? "Enviando..." : "Enviar"}
           </button>
+          {successMessage && <p className="successMessage">{successMessage}</p>}
         </form>
       </div>
     </section>

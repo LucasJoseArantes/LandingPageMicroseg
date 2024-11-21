@@ -41,8 +41,8 @@
 }
 
 .faqQuestion {
-    background-color: #181818ec;
-    padding: 5px;
+    background-color: #032D60;
+    padding: 10px;
     margin: 10px 0;
     cursor: pointer;
     display: flex;
@@ -53,14 +53,14 @@
     transition: background-color 0.3s;
     width: 600px;
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1.5em;
     letter-spacing: -0.03em;
     color: #ffffff;
     
 }
 
 .faqQuestion:hover {
-    background-color: #000000;
+    background-color: #084ea3;
 }
 
 .faqAnswer {
@@ -71,7 +71,7 @@
     flex-wrap: wrap;
     max-width: 600px;
     text-align: left;
-    border: 2px solid #000000;
+    border: 2px solid #031831;
     border-top: none;
 }
 
