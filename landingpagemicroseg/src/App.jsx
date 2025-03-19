@@ -40,16 +40,11 @@ function App() {
   return (
     <div>
       <Header />
-
       <HeroSection />
-      <AnimatedSection>
-         <SectionOne />
-      </AnimatedSection>
 
       <AnimatedSection>
         <SectionCampaign />
       </AnimatedSection>
-
 
       <AnimatedSection>
         <WhyChooseUs />

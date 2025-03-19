@@ -1,10 +1,46 @@
-.headerContainer{
-    background-color: black;
+@media screen and (max-width: 768px){
+   
+body .open{
+    display: flex;
+    flex-direction: column;    
+    position: absolute;
+    top: 90px;
+    right: 10;
 }
 
-.logo-container{
-    width: fit-content;
+.closed{
+    display: none !important;
+}	
+
+.hamburger {
+    align-self: flex-end;
+    justify-self: end;
+    margin: 40px;
 }
+
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.nav-menu{
+    background-color: rgb(61, 61, 61);
+    padding: 10px;
+    max-height: 200px;
+}
+}
+
+.headerContainer{
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
 
 .headerContainer div{
     margin: auto;
@@ -17,7 +53,6 @@
 .headerContainer img {
     width: 180px;
     margin: auto;
-    margin-top: -20px
 }
 
 .headerContainer img:hover {
@@ -26,3 +61,31 @@
     transition: 0.5s;
 }
 
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    
+    
+}
+
+details{
+    max-width: 86px;
+    max-height: 15px;
+}
+
+details:hover{
+    cursor: pointer;
+}
+
+.dropdown-menu{
+    color: white;
+    width: 160px;
+    background-color: rgb(65, 65, 65);
+}
+
+.dropdown-menu li{
+    margin: 10px 0px;
+}

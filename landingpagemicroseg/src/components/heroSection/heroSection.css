@@ -1,14 +1,12 @@
+
 .hero-section{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
-    height: 640px;
 
 }
 .hero-section__content{
-    border: 2px solid blue;
-    margin: 100px;
+    margin: 80px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -19,30 +17,41 @@
     flex-direction: column;
     justify-content: center;
     
-    
 }
 
 .cta-container{
-    border: 2px solid yellow;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+
 }
+
 
 
 .cta-container button{
 background: #111111;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-letter-spacing: 0.1px;
 color: #FFFFFF;
-margin: 2px 10px;
+padding: 20px 20px;
+width: 200px;
+font-size: 20px;
+}
+
+.cta-container button:hover{
+    background: #FFFFFF;
+    color: #111111;
+    border: 1px solid #111111;
+    transition: 0.8s ease;
+    cursor: pointer;
+    scale: 0.95;
+
+    }
+
+.cta-container p{
+    margin-top: 20px;
+    font-size: 15px;
 
 }
 
 .hero-section__text{
-    border: 2px solid pink;
     display: flex;
     flex-direction: column;
     justify-content: center;

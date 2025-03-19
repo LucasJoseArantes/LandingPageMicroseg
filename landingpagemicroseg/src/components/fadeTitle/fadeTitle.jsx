@@ -14,7 +14,7 @@ const FadeTitle = (props) => {
       animate={inView ? { opacity: 1, y: 0 } : {}} // Animação dispara quando inView é true
       transition={{ duration: 0.5 }}  // Duração da animação
     >
-      <h1>{props.title}</h1>
+      <h1 class="text-5xl font-semibold text-center sm:text-3xl">{props.title}</h1>
     </motion.div>
   );
 };

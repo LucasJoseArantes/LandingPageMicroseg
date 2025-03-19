@@ -17,7 +17,7 @@ export default function HeroSection() {
           </div>
           <div class="cta-container">
             <button>Seja um parceiro</button>
-            <p>
+            <p class="mt-8 text-lg font-medium text-pretty sm:text-x3/6">
               Fale com um especialista e descubra as melhores opções para você.
             </p>
           </div>
