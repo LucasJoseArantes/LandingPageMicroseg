@@ -1,0 +1,54 @@
+.hero-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    height: 640px;
+
+}
+.hero-section__content{
+    border: 2px solid blue;
+    margin: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.hero-section__content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+
+.cta-container{
+    border: 2px solid yellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
+.cta-container button{
+background: #111111;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.1px;
+color: #FFFFFF;
+margin: 2px 10px;
+
+}
+
+.hero-section__text{
+    border: 2px solid pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-section__text h1, p{
+    margin-bottom: 24px;
+}
+

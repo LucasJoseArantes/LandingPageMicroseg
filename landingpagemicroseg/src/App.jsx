@@ -9,6 +9,10 @@ import SectionContact from './components/contact/sectionContact';
 import Footer from './components/footer/footer';
 import SectionCampaign from './components/sectionCampaign/sectionCampaign';
 import Ratings from "./components/ratings/ratrings";
+
+
+import HeroSection from './components/heroSection/heroSection';
+
 import './app.css';
 
 const AnimatedSection = ({ children }) => {
@@ -36,6 +40,8 @@ function App() {
   return (
     <div>
       <Header />
+
+      <HeroSection />
       <AnimatedSection>
          <SectionOne />
       </AnimatedSection>
